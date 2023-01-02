@@ -1,0 +1,76 @@
+@font-face  {
+    font-family: wordleLogo;
+    src: url(nyt_font_mimic-webfont.woff);
+}
+body {
+    margin: .25em;
+    background-color: #3a3a3c;    
+    min-width: 25em;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+/*ID*/
+#Hint {
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase; 
+    color: transparent;
+    text-shadow: 0 0 15px white;
+}
+#Hint .getHint {
+    visibility: hidden;
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    z-index: 1;
+}
+#Hint h1 {
+    display: inline-grid;
+}
+#Hint:hover .getHint{
+    visibility: visible;
+}
+/*Classes*/
+.popup {
+    padding: .05em;
+    background-color: #121213;
+}
+.title {
+    color: white;
+    flex-grow: 2;
+    font-family: "wordleLogo";
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    position: relative;
+    margin-bottom: 0;
+}
+.Hint,.title {
+    display: flex;
+    justify-content: center;
+}
+.letter {
+    width: 2.25em;
+    background-color: #538d4e;
+    padding: 0.5em .75em 0.5em .75em;
+    box-sizing: border-box;
+}
+.hintAnimation {
+    animation-name: hintAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+/*animation*/ 
+@keyframes hintAnimation {
+    from {text-shadow: 0 0 15px white;}
+    to {text-shadow: 0 0 0 white;}
+}
